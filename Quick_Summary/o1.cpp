@@ -22,12 +22,11 @@ int func1(int N){
 }
 
 int func2(int arr[], int N){
+  int temp[101]={};
   for(int i=0;i<N;i++)
   {
-      for(int j=1;j<N;i++){
-        if(arr[i]+arr[j]==100)
-            return 1;
-      }
+    if(temp[100-arr[i]]==1) return 1;
+    temp[arr[i]]=1;
   }
   return 0;
 }
